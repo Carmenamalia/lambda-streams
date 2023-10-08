@@ -1,6 +1,6 @@
-package Teme;
+package Teme.Ex2;
 
-import helperclasses.Person;
+
 
 import java.util.*;
 
@@ -9,10 +9,10 @@ public class Ex2 {
         //Sorteaza o o lista de persoane dupa nume, utilizand un comparator
         //Comparatorul nu va fi definit printr-o clasa care sa implementeze interfata Comparator
 
-        Person person1 = new Person("Andrei", 23, "Romania");
-        Person person2 = new Person("Gary", 23, "Anglia");
-        Person person3 = new Person("Paula", 23, "Romania");
-        Person person4 = new Person("Marianne", 23, "Franta");
+        Person person1 = new Person("Andrei", 23);
+        Person person2 = new Person("Gary", 23);
+        Person person3 = new Person("Paula", 23);
+        Person person4 = new Person("Marianne", 23);
 
         List<Person> people = List.of(person1, person2, person3, person4);
 
@@ -20,6 +20,7 @@ public class Ex2 {
                 .sorted(Comparator.comparing(person -> person.getName()))//sortez persoanele dupa nume
                 .toList();
         sortedPerson.forEach(person -> System.out.println(person.getName()));//afisez lista
+
         System.out.println(getSortedSet(people));//apelez metoda de sortare
 
     }
